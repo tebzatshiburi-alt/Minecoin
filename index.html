@@ -184,6 +184,20 @@
     document.getElementById('avatar').textContent = (u.first_name?.[0] || 'M').toUpperCase();
   }
   render();
+  const AdController = window.Adsgram.init({ 
+  blockId: "42923" 
+});
+
+function showAd() {
+  AdController.show().then((result) => {
+    coins += 100;
+    render();
+    alert("Ad completed! +100 Coins");
+  }).catch((error) => {
+    console.error("Ad error or closed early:", error);
+  });
+}
+  
 </script>
 </body>
 </html>
