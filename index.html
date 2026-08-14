@@ -153,7 +153,7 @@
   const tg = window.Telegram?.WebApp;
   if (tg) { tg.ready(); tg.expand(); }
 
-  let coins = 4553;
+  let coins = 0.00;
   function render() {
     document.getElementById('coins').textContent = coins.toLocaleString();
     document.getElementById('bigCoins').textContent = coins.toLocaleString();
